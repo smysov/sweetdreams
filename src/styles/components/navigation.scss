@@ -1,0 +1,143 @@
+.navigation {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1D7373;
+  z-index: 3;
+  transform: translateX(100%);
+  transition: all .5s linear .7s;
+
+  &--active {
+    width: 85%;
+    z-index: 3;
+    transform: translateX(0);
+    transition: transform .5s linear;
+
+    @include mini-mobile {
+      width: 100%;
+    }
+
+    .menu {
+      &__item {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+        transition: all .5s linear 1s;
+      }
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    transition: opacity .5s linear;
+    z-index: 3;
+  }
+  
+  &__link {
+    font-family: 'Pechenka',
+    Arial,
+    sans-serif;
+    font-size: 38px;
+    color: #fff;
+    letter-spacing: 3px;
+    opacity: 0;
+    text-transform: uppercase;
+    transition: all .8s ease-out;
+
+    &.vissible {
+      opacity: 1;
+    }
+
+    &:hover {
+      color: #006363;
+    }
+  }
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  row-gap: 50px;
+
+  @media (orientation: landscape) and (max-height: 415px) {
+    row-gap: 20px;
+    top: 35px;
+  }
+
+  &__item {
+    font-family: "Beriot",
+      "Giorgio",
+      sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    filter: blur(28px);
+    transition: all .5s linear;
+
+    transform: translateY(600%);
+
+    @media (orientation: landscape) and (max-height: 280px) {
+      font-size: 16px;
+    }
+
+    &:nth-child(1) {
+      transition-delay: .2s;
+    }
+
+    &:nth-child(2) {
+      transition-delay: .3s;
+    }
+
+    &:nth-child(3) {
+      transition-delay: .4s;
+    }
+
+    &:nth-child(4) {
+      transition-delay: .5s;
+    }
+
+    &:nth-child(5) {
+      transition-delay: .8s;
+    }
+
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    color: #fff;
+    transition: all .3s linear;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 7px;
+      background-color: #33CCCC;
+      transform: scaleX(0);
+      transform-origin: left;
+      z-index: -1;
+      transition: all .3s linear;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+
+    &:active {
+      opacity: .7;
+    }
+  }
+}

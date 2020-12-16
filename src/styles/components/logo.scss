@@ -1,0 +1,28 @@
+.logo {
+  padding-left: 10px;
+  opacity: 1;
+  z-index: 3;
+  transition: opacity .5s linear .1s;
+  
+  &.hidden {
+    opacity: 0;
+    transition: opacity .5s linear .1s;
+    z-index: -1;
+  }
+
+  &__link {
+    font-family: 'Pechenka',
+      Arial,
+      sans-serif;
+    font-size: 38px;
+    color: #fff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: all .5s ease-out;
+
+    &:hover {
+      color: #006363;
+      transform: scale(1.05);
+    }
+  }
+}
