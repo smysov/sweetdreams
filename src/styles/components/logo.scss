@@ -1,9 +1,9 @@
 .logo {
-  padding-left: 10px;
+  text-align: center;
   opacity: 1;
   z-index: 3;
   transition: opacity .5s linear .1s;
-  
+
   &.hidden {
     opacity: 0;
     transition: opacity .5s linear .1s;
@@ -11,18 +11,49 @@
   }
 
   &__link {
-    font-family: 'Pechenka',
-      Arial,
-      sans-serif;
-    font-size: 38px;
+    @include font("Kamila", 36px, 500, normal);
     color: #fff;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-transform: capitalize;
     transition: all .5s ease-out;
+    line-height: 1;
+
+    @include tablets {
+      font-size: 42px;
+      letter-spacing: 5px;
+      letter-spacing: -3px;
+    }
 
     &:hover {
       color: #006363;
-      transform: scale(1.05);
+    }
+
+    & span {
+      @include tablets {
+        display: none;
+      }
+    }
+
+  }
+
+  &__icon {
+    left: 215px;
+    position: absolute;
+    top: 10px;
+    width: 22px;
+    height: 34px;
+    transform: rotate(25deg);
+    z-index: -1;
+
+    @include mini-mobile {
+      left: 203px;
+    }
+
+    @include tablets {
+      left: 62px;
+      top: 2px;
+      z-index: 1;
     }
   }
+
 }

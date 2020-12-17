@@ -57,9 +57,9 @@ task('copy:pictures', () => {
 
 //КОПИРОВАНИЕ ДЕКОРАТИВНЫХ ИЗОБРАЖЕНИЙ
 
-task('copy:decor', () => {
-	return src(`${SRC_PATH}/images/decor/*`)
-		.pipe(dest(`${DIST_PATH}/img/decor`))
+task('copy:logo', () => {
+	return src(`${SRC_PATH}/images/logo/*`)
+		.pipe(dest(`${DIST_PATH}/images/logo`))
 		.pipe(reload({ stream: true }));
 });
 
@@ -87,14 +87,14 @@ task('images:content', () => {
 
 task('images:decor', () => {
 	return src(`${SRC_PATH}/images/decor/*.{png,jpg,svg}`)
-		.pipe(
-			imagemin([
-				imagemin.optipng({ optimizationLevel: 5 }),
-				imagemin.mozjpeg({ progressive: true }),
-				imagemin.svgo(),
-			]),
-		)
-		.pipe(dest(`${DIST_PATH}/img/decor/`));
+		// .pipe(
+		// 	// imagemin([
+		// 	// 	imagemin.optipng({ optimizationLevel: 5 }),
+		// 	// 	imagemin.mozjpeg({ progressive: true }),
+		// 	// 	imagemin.svgo(),
+		// 	// ]),
+		// )
+		.pipe(dest(`${DIST_PATH}/images/decor/`));
 });
 
 //КОНВЕРТАЦИЯ ИЗОБРАЖЕНИЙ
@@ -108,26 +108,24 @@ task('webp:content', () => {
 //СТИЛИ
 
 task('styles', () => {
-	return (
-		src([...STYLE_LIBS, `${SRC_PATH}/styles/main.scss`])
-			.pipe(gulpif(env === 'dev', sourcemaps.init()))
-			.pipe(sassGlob())
-			.pipe(concat('main.min.scss'))
-			.pipe(sass().on('error', sass.logError))
-			.pipe(
-				gulpif(
-					env === 'dev',
-					autoprefixer({
-						cascade: false,
-					}),
-				),
-			)
-			.pipe(gulpif(env === 'prod', gcmq()))
-			.pipe(gulpif(env === 'prod', csso()))
-			.pipe(gulpif(env === 'dev', sourcemaps.write()))
-			.pipe(dest(`${DIST_PATH}/css`))
-			.pipe(reload({ stream: true }))
-	);
+	return src([...STYLE_LIBS, `${SRC_PATH}/styles/main.scss`])
+		.pipe(gulpif(env === 'dev', sourcemaps.init()))
+		.pipe(sassGlob())
+		.pipe(concat('main.min.scss'))
+		.pipe(sass().on('error', sass.logError))
+		.pipe(
+			gulpif(
+				env === 'dev',
+				autoprefixer({
+					cascade: false,
+				}),
+			),
+		)
+		.pipe(gulpif(env === 'prod', gcmq()))
+		.pipe(gulpif(env === 'prod', csso()))
+		.pipe(gulpif(env === 'dev', sourcemaps.write()))
+		.pipe(dest(`${DIST_PATH}/css`))
+		.pipe(reload({ stream: true }));
 });
 
 //СКРИПТЫ
@@ -165,7 +163,7 @@ task('icons', () => {
 				},
 			}),
 		)
-		.pipe(dest(`${DIST_PATH}/img/icons`));
+		.pipe(dest(`${DIST_PATH}/images/icons`));
 });
 
 //СЕРВЕР
@@ -196,7 +194,7 @@ task(
 		parallel(
 			'copy:html',
 			'copy:pictures',
-			'copy:decor',
+			'copy:logo',
 			'images:content',
 			'images:decor',
 			'copy:favicons',
@@ -217,7 +215,7 @@ task(
 		parallel(
 			'copy:html',
 			'copy:pictures',
-			'copy:decor',
+			'copy:logo',
 			'images:content',
 			'images:decor',
 			'copy:favicons',

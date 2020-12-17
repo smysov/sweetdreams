@@ -1,0 +1,82 @@
+.phone {
+  position: absolute;
+  right: 70px;
+  font-family: "Kamila";
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  color: #fff;
+  letter-spacing: 2px;
+  display: none;
+
+  @media (min-width: 410px) {
+    display: inherit;
+  }
+
+  @include tablets {
+    position: inherit;
+  }
+
+  &:hover {
+
+    .phone__inner-icon {
+      background-color: transparent;
+    }
+
+    .phone__icon {
+      transform: inherit;
+      fill: #00fa43;
+    }
+
+    .phone__text {
+      opacity: .7;
+    }
+  }
+
+}
+
+
+.phone {
+
+  &__inner-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgb(223, 223, 223);
+    margin-right: 12px;
+    transition: all .3s ease-in;
+    padding-top: 3px;
+  }
+}
+
+.phone {
+
+  &__icon {
+    display: inherit;
+    width: 20px;
+    height: 20px;
+    transform: rotate(133.5deg);
+    fill: red;
+    transition: all .3s ease-in;
+  }
+}
+
+.phone {
+  &__text {
+    transition: all .3s ease-in;
+    display: none;
+
+    @media (min-width: 850px) {
+      padding-top: 6px;
+      display: inherit;
+    }
+  }
+
+  @include tablets {
+    display: inherit;
+    flex-shrink: 0;
+  }
+}
