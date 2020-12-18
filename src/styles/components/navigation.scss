@@ -4,10 +4,11 @@
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #1D7373;
+  background-color: $blue-3;
   z-index: 3;
   transform: translateX(100%);
   transition: all .5s linear .7s;
+  overflow-y: hidden;
 
   @include tablets {
     position: inherit;
@@ -67,7 +68,7 @@
     }
 
     &:hover {
-      color: #006363;
+      color: $blue-5;
     }
   }
 }
@@ -91,7 +92,6 @@
 
 
 .menu {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -99,7 +99,7 @@
   height: 100%;
   row-gap: 50px;
 
-  @media (orientation: landscape) and (max-height: 415px) {
+  @media (orientation: landscape) and (max-height: 520px) {
     row-gap: 20px;
     top: 35px;
   }
@@ -107,6 +107,10 @@
   @include tablets {
     flex-direction: row;
     column-gap: 15px;
+  }
+
+  @include desktop {
+    column-gap: 25px;
   }
 }
 
