@@ -51,7 +51,7 @@ task('fonts', () => {
 
 task('copy:pictures', () => {
 	return src(`${SRC_PATH}/images/content/*`)
-		.pipe(dest(`${DIST_PATH}/img/content`))
+		.pipe(dest(`${DIST_PATH}/images/content`))
 		.pipe(reload({ stream: true }));
 });
 
@@ -75,14 +75,14 @@ task('copy:favicons', () => {
 
 task('images:content', () => {
 	return src(`${SRC_PATH}/images/content/*.{png,jpg}`)
-		.pipe(
-			imagemin([
-				imagemin.optipng({ optimizationLevel: 3 }),
-				imagemin.mozjpeg({ progressive: true }),
-				imagemin.svgo(),
-			]),
-		)
-		.pipe(dest(`${DIST_PATH}/img/content/`));
+		// .pipe(
+		// 	imagemin([
+		// 		imagemin.optipng({ optimizationLevel: 3 }),
+		// 		imagemin.mozjpeg({ progressive: true }),
+		// 		imagemin.svgo(),
+		// 	]),
+		// )
+		.pipe(dest(`${DIST_PATH}/images/content/`));
 });
 
 task('images:decor', () => {
@@ -99,11 +99,11 @@ task('images:decor', () => {
 
 //КОНВЕРТАЦИЯ ИЗОБРАЖЕНИЙ
 
-task('webp:content', () => {
-	return src(`${SRC_PATH}/images/content/*.{jpg,png}`)
-		.pipe(webp({ quality: 80 }))
-		.pipe(dest(`${DIST_PATH}/img/content/`));
-});
+// task('webp:content', () => {
+// 	return src(`${SRC_PATH}/images/content/*.{jpg,png}`)
+// 		.pipe(webp({ quality: 80 }))
+// 		.pipe(dest(`${DIST_PATH}/img/content/`));
+// });
 
 //СТИЛИ
 
@@ -133,7 +133,7 @@ task('styles', () => {
 task('scripts', () => {
 	return src(`${SRC_PATH}/scripts/*js`)
 		.pipe(gulpif(env === 'dev', sourcemaps.init()))
-		.pipe(concat('main.min.js', { newLine: ';' }))
+		.pipe(concat('main.min.js'))
 		.pipe(gulpif(env === 'prod', babel({ presets: ['@babel/env'] })))
 		.pipe(gulpif(env === 'prod', uglify()))
 		.pipe(gulpif(env === 'dev', sourcemaps.write()))
@@ -198,7 +198,7 @@ task(
 			'images:content',
 			'images:decor',
 			'copy:favicons',
-			'webp:content',
+			// 'webp:content',
 			'icons',
 			'styles',
 			'scripts',
@@ -219,7 +219,7 @@ task(
 			'images:content',
 			'images:decor',
 			'copy:favicons',
-			'webp:content',
+			// 'webp:content',
 			'icons',
 			'styles',
 			'scripts',

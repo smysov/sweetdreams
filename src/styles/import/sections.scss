@@ -1,0 +1,24 @@
+.hero {
+  position: relative;
+  background-color: #33CCCC;
+  padding: 100px 0 80px;
+
+  @media (min-width: 510px) {
+    background: url("../images/decor/welcome-pattern.png") right bottom no-repeat;
+    background-color: #33CCCC;
+  }
+
+  @include tablets {
+    padding: 100px 0 60px;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    bottom: -8%;
+    left: 5%;
+    background: url(../images/decor/hero-sheets-one.png) no-repeat;
+    width: 50%;
+    height: 112px;
+  }
+}

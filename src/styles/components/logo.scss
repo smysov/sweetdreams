@@ -1,4 +1,5 @@
 .logo {
+  position: relative;
   text-align: center;
   opacity: 1;
   z-index: 3;
@@ -25,7 +26,7 @@
     }
 
     &:hover {
-      color: #006363;
+      color: $blue-5;
     }
 
     & span {
@@ -37,21 +38,21 @@
   }
 
   &__icon {
-    left: 215px;
+    left: 191px;
     position: absolute;
-    top: 10px;
+    top: -12px;
     width: 22px;
     height: 34px;
     transform: rotate(25deg);
     z-index: -1;
 
     @include mini-mobile {
-      left: 203px;
+      left: 191px;
     }
 
     @include tablets {
-      left: 62px;
-      top: 2px;
+      left: 40px;
+      top: -20px;
       z-index: 1;
     }
   }
