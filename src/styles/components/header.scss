@@ -6,8 +6,8 @@
   background: none;
   padding: 20px 0;
   z-index: 10000;
-  padding: 20px 0;
-  transition: .3s linear;
+  padding: 20px 0 40px;
+  transition: all .5s linear;
 
   &__inner {
     display: flex;
@@ -19,5 +19,5 @@
 
 .sticky {
   background-color: rgba($blue-5, .7);
-  padding: 5px 0;
+  padding: 16px 0 10px;
 }

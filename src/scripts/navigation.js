@@ -17,7 +17,7 @@
 	}
 
 	function closeMenu({ target }) {
-		if (target === navigationLogo || !navigation.contains(target)) {
+		if (!navigation.contains(target)) {
 			openMenu.classList.remove('opened');
 			navigation.classList.remove('navigation--active');
 			headerLogo.classList.remove('hidden');
