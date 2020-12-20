@@ -74,27 +74,31 @@ task('copy:favicons', () => {
 //Оптимизация изображений
 
 task('images:content', () => {
-	return src(`${SRC_PATH}/images/content/*.{png,jpg}`)
-		// .pipe(
-		// 	imagemin([
-		// 		imagemin.optipng({ optimizationLevel: 3 }),
-		// 		imagemin.mozjpeg({ progressive: true }),
-		// 		imagemin.svgo(),
-		// 	]),
-		// )
-		.pipe(dest(`${DIST_PATH}/images/content/`));
+	return (
+		src(`${SRC_PATH}/images/content/*.{png,jpg}`)
+			// .pipe(
+			// 	imagemin([
+			// 		imagemin.optipng({ optimizationLevel: 3 }),
+			// 		imagemin.mozjpeg({ progressive: true }),
+			// 		imagemin.svgo(),
+			// 	]),
+			// )
+			.pipe(dest(`${DIST_PATH}/images/content/`))
+	);
 });
 
 task('images:decor', () => {
-	return src(`${SRC_PATH}/images/decor/*.{png,jpg,svg}`)
-		// .pipe(
-		// 	// imagemin([
-		// 	// 	imagemin.optipng({ optimizationLevel: 5 }),
-		// 	// 	imagemin.mozjpeg({ progressive: true }),
-		// 	// 	imagemin.svgo(),
-		// 	// ]),
-		// )
-		.pipe(dest(`${DIST_PATH}/images/decor/`));
+	return (
+		src(`${SRC_PATH}/images/decor/*.{png,jpg,svg}`)
+			// .pipe(
+			// 	// imagemin([
+			// 	// 	imagemin.optipng({ optimizationLevel: 5 }),
+			// 	// 	imagemin.mozjpeg({ progressive: true }),
+			// 	// 	imagemin.svgo(),
+			// 	// ]),
+			// )
+			.pipe(dest(`${DIST_PATH}/images/decor/`))
+	);
 });
 
 //КОНВЕРТАЦИЯ ИЗОБРАЖЕНИЙ
@@ -143,27 +147,27 @@ task('scripts', () => {
 
 //СПРАЙТ
 
-task('icons', () => {
-	return src(`${SRC_PATH}/images/icons/*.svg`)
-		.pipe(
-			svgo({
-				plugins: [
-					{
-						removeAttrs: { attrs: '(data.*)' },
-					},
-				],
-			}),
-		)
-		.pipe(
-			svgSprite({
-				mode: {
-					symbol: {
-						sprite: '../sprite.svg',
-					},
-				},
-			}),
-		)
-		.pipe(dest(`${DIST_PATH}/images/icons`));
+task("icons", () => {
+  return src(`${SRC_PATH}/images/icons/*.svg`)
+    .pipe(
+      svgo({
+        plugins: [
+          {
+            removeAttrs: { attrs: "(fill|data.*)" }
+          }
+        ]
+      })
+    )
+    .pipe(
+      svgSprite({
+        mode: {
+          symbol: {
+            sprite: "../sprite.svg"
+          }
+        }
+      })
+    )
+    .pipe(dest(`${DIST_PATH}/images/icons`));
 });
 
 //СЕРВЕР
