@@ -23,3 +23,13 @@
   font-weight: $font-weight;
   font-style: $font-style;
 }
+
+@mixin title {
+  font-family: "Colus";
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+}

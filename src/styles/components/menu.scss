@@ -29,7 +29,7 @@
     @include font('Colus', 24px, 400, normal);
     letter-spacing: 2px;
     filter: blur(24px);
-    transition: all .5s linear;
+    transition: all .5s linear 1s;
 
     transform: translateY(50%);
 
