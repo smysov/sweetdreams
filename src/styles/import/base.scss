@@ -31,7 +31,7 @@ a {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
 }
 
 
@@ -90,5 +90,10 @@ img {
     &::after {
       right: 80%;
     }
+  }
+
+  &:hover {
+    color: $blue-3;
+    border: 4px solid $blue-3;
   }
 }

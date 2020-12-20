@@ -12,7 +12,7 @@ function appearAdvantages() {
 }
 
 function appearTitle() {
-	const title = document.querySelector('.about-us__title');
+	const title = document.querySelector('.section__title');
 	const introPosition = title.getBoundingClientRect().top;
 	const screenPosition = window.innerHeight / 1.4;
 	if (introPosition < screenPosition) {
@@ -21,7 +21,7 @@ function appearTitle() {
 }
 
 function appearSubtitle() {
-	const title = document.querySelector('.about-us__subtitle');
+	const title = document.querySelector('.section__subtitle');
 	const introPosition = title.getBoundingClientRect().top;
 	const screenPosition = window.innerHeight / 1.5;
 	if (introPosition < screenPosition) {

@@ -14,17 +14,17 @@
   }
 
   &__inner-image {
-    width: 300px;
+    max-width: 300px;
 
     &::before {
       position: absolute;
       content: "";
       bottom: -6%;
-      right: 0;
+      right: -5%;
       width: 305px;
       height: 214px;
-      background: url("../images/decor/hero-berries.png") no-repeat;
-      transform: scale(.9) rotate(9deg);
+      background: url(../images/decor/hero-berries.png) no-repeat;
+      transform: scale(0.9) rotate(9deg);
 
       @include tablets {
         bottom: 3%;
@@ -50,7 +50,7 @@
     }
 
     @include tablets {
-      width: 500px;
+      max-width: 500px;
     }
   }
 
