@@ -76,13 +76,13 @@ task('copy:favicons', () => {
 task('images:content', () => {
 	return (
 		src(`${SRC_PATH}/images/content/*.{png,jpg}`)
-			// .pipe(
-			// 	imagemin([
-			// 		imagemin.optipng({ optimizationLevel: 3 }),
-			// 		imagemin.mozjpeg({ progressive: true }),
-			// 		imagemin.svgo(),
-			// 	]),
-			// )
+			.pipe(
+				imagemin([
+					imagemin.optipng({ optimizationLevel: 3 }),
+					imagemin.mozjpeg({ progressive: true }),
+					imagemin.svgo(),
+				]),
+			)
 			.pipe(dest(`${DIST_PATH}/images/content/`))
 	);
 });
@@ -90,13 +90,13 @@ task('images:content', () => {
 task('images:decor', () => {
 	return (
 		src(`${SRC_PATH}/images/decor/*.{png,jpg,svg}`)
-			// .pipe(
-			// 	// imagemin([
-			// 	// 	imagemin.optipng({ optimizationLevel: 5 }),
-			// 	// 	imagemin.mozjpeg({ progressive: true }),
-			// 	// 	imagemin.svgo(),
-			// 	// ]),
-			// )
+			.pipe(
+				imagemin([
+					imagemin.optipng({ optimizationLevel: 5 }),
+					imagemin.mozjpeg({ progressive: true }),
+					imagemin.svgo(),
+				]),
+			)
 			.pipe(dest(`${DIST_PATH}/images/decor/`))
 	);
 });

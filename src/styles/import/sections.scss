@@ -6,21 +6,6 @@
     position: relative;
     @include title;
     margin-bottom: 20px;
-    transform: translateX(-10px);
-    opacity: 0;
-    transition: all .5s ease-in-out;
-
-    &::before {
-      position: absolute;
-      content: "";
-      bottom: -5%;
-      left: 50%;
-      width: 35%;
-      height: 3px;
-      background-color: $blue-2;
-      border-radius: 5px;
-      transform: translateX(-50%);
-    }
 
     @include tablets {
       font-size: 30px;
@@ -37,9 +22,6 @@
     font-weight: 500;
     color: #000;
     margin-bottom: 60px;
-    transform: translateX(10px);
-    opacity: 0;
-    transition: all .5s ease-in-out .5s;
 
     @media (min-width: 500px) {
       font-size: 24px;
@@ -76,6 +58,10 @@
 .about-us {
 
   &__title {
+    transform: translateX(-10px);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+
     &>span {
       display: block;
 
@@ -85,9 +71,19 @@
     }
   }
 
+  &__subtitle {
+    transform: translateX(10px);
+    opacity: 0;
+    transition: all .5s ease-in-out .5s;
+  }
+
   @include tablets {
     background: url("../images/decor/aboutus-sheet.png") left 33% no-repeat;
   }
+}
+
+.catalog {
+  background-color: #f5f5f5;
 }
 
 .appear-title {
