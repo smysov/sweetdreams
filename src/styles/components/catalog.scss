@@ -6,7 +6,6 @@
 
 
   @include tablets {
-    justify-content: flex-start;
     row-gap: 15px;
     column-gap: 10px;
   }
@@ -36,6 +35,9 @@
       }
     }
   }
+}
+
+.catalog-list {
 
   &__background,
   &__back {
@@ -74,7 +76,7 @@
     text-align: center;
   }
 
-   .hidden {
+  .hidden {
     display: none;
   }
 }
