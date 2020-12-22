@@ -96,17 +96,6 @@
 		});
 
 		surface.addEventListener('touchstart', function (e) {
-			// if (e.target.classList.contains('button-prev') && e.target.classList.contains('button-next')) {
-			//   if (e.target.classList.contains('button-prev')) {
-			//     if (isEnabled) {
-			//       previousItem(currentItem)
-			//     }
-			//   } else if (e.target.classList.contains('button-next')) {
-			//     if (isEnabled) {
-			//       nextItem(currentItem)
-			//     }
-			//   }
-			// }
 
 			let touchObject = e.changedTouches[0];
 			startX = touchObject.pageX;
