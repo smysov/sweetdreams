@@ -321,6 +321,55 @@
         </div>
       </div>
     </section>
+
+    <section class="section order">
+      <div class="container">
+        <h2 class="section__title">Закакзать доставку</h2>
+
+        <form class="form" action="#" id="form">
+          <div class="form__inner form__inner--base">
+            <div class="form__item">
+              <label class="form__label" for="name">Имя*:</label>
+              <input class="form__input _required _name" type="text" name="name" id="name"
+                placeholder="Сергей">
+            </div>
+            <div class="form__item">
+              <label class="form__label" for="phone">Телефон*:</label>
+              <input class="form__input _required _phone" type="text" name="phone" id="phone"
+                placeholder="+79277628819">
+            </div>
+          </div>
+          <div class="form__inner form__inner--radio">
+            <div class="options">
+              <div class="options__item">
+                <input class="options__input" type="radio" id="cash" value="cash" name="pay"
+                  checked>
+                <label for="cash" class="options__label">Оплата наличными</label>
+              </div>
+              <div class="options__item">
+                <input class="options__input" type="radio" id="card" value="card" name="pay"
+                  checked>
+                <label for="card" class="options__label">Оплата картой</label>
+              </div>
+            </div>
+          </div>
+          <div class="form__inner form__inner--comment">
+            <div class="form__item">
+              <label class="form__label" for="comment">Комментарий:</label>
+              <textarea class="form__comment" id="comment" name="comment"
+                placeholder="Хочу..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="form__button">Отправить</button>
+        </form>
+      </div>
+
+      <div class="preloader">
+        <div class="loader"></div>
+      </div>
+
+    </section>
+
   </main>
   <script src="./scripts/main.min.js"></script>
 </body>
