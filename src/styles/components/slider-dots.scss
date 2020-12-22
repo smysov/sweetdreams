@@ -1,0 +1,23 @@
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+
+  &__dot {
+    width: 16px;
+    height: 16px;
+    border: 2px solid $blue-1;
+    border-radius: 50%;
+    background-color: #fff;
+    outline: none;
+
+    &:hover {
+      opacity: .8;
+    }
+
+    &.active {
+      border-color: $blue-3;
+      background-color: $blue-3;
+    }
+  }
+}

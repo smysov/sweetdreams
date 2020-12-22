@@ -63,7 +63,7 @@
   </header>
 
   <main class="main">
-    <section class="hero">
+    <section class="section hero">
       <div class="container">
         <div class="hero__inner-information">
           <div class="hero__product">
@@ -81,10 +81,11 @@
         </div>
       </div>
     </section>
-    <section class="about-us">
+    <section class="section about-us">
       <div class="container">
-        <h2 class="about-us__title">Почему <span>Sweet dreems</span></h2>
-        <p class="about-us__subtitle">В нашем мире необходимо удивлять, поэтому я каждый раз
+        <h2 class="section__title about-us__title">Почему <span>Sweet dreems</span></h2>
+        <p class="section__subtitle about-us__subtitle">В нашем мире необходимо удивлять,
+          поэтому я каждый раз
           разрабатываю разные дизайны и вкусы.
         </p>
 
@@ -110,9 +111,9 @@
             <div class="advantages__description">
               <h3 class="advantages__title">Вкусно</h3>
               <p class="advantages__subtitle">Нежные, ненавязчивые,
-              изысканные – так клиенты
-              описывают вкусовые качества
-              десерта.</p>
+                изысканные – так клиенты
+                описывают вкусовые качества
+                десерта.</p>
             </div>
           </li>
           <li class="advantages__item">
@@ -124,14 +125,251 @@
             <div class="advantages__description">
               <h3 class="advantages__title">Полезно</h3>
               <p class="advantages__subtitle">Натуральность - ключевое
-              качество моих десертов.
-              Я использую только
-              природные ингредиенты.</p>
+                качество моих десертов.
+                Я использую только
+                природные ингредиенты.</p>
             </div>
           </li>
         </ul>
       </div>
     </section>
+    <section class="section catalog">
+      <div class="container">
+        <h2 class="section__title catalog__title">мои работы</h2>
+
+        <nav class="catalog-groups">
+          <ul class="groups">
+            <li class="groups__item">
+              <button class="groups__button button" data-group="all">всё</button>
+            </li>
+            <li class="groups__item">
+              <button class="groups__button button" data-group="desserts">десерты</button>
+            </li>
+            <li class="groups__item" data-group="zephyr">
+              <button class="groups__button button" data-group="zephyr">зефир</button>
+            </li>
+            <li class="groups__item">
+              <button class="groups__button button" data-group="meringue">безе</button>
+            </li>
+            <li class="groups__item">
+              <button class="groups__button button" data-group="marshmeloy">маршмеллоу</button>
+            </li>
+          </ul>
+        </nav>
+        <ul class="catalog-list">
+          <li class="catalog-list__item desserts">
+            <div class="catalog-list__background">
+              <img src="./images/content/dessert-1.jpg" alt="" class="catlog-list__image">
+            </div>
+            <div class="catalog-list__back">
+              <h2 class="catalog-list__title">Название товара-1</h2>
+              <p class="catalog-list__subtitle">Здесь будет описание товара-1</p>
+            </div>
+          </li>
+          <li class="catalog-list__item zephyr">
+            <div class="catalog-list__background">
+              <img src="./images/content/zephyr-1.jpg" alt="" class="catlog-list__image">
+            </div>
+            <div class="catalog-list__back">
+              <h2 class="catalog-list__title">Название товара-2</h2>
+              <p class="catalog-list__subtitle">Здесь будет описание товара-2</p>
+            </div>
+          </li>
+          <li class="catalog-list__item marshmeloy">
+            <div class="catalog-list__background">
+              <img src="./images/content/marshmallow-1.jpg" alt="" class="catlog-list__image">
+            </div>
+            <div class="catalog-list__back">
+              <h2 class="catalog-list__title">Название товара-3</h2>
+              <p class="catalog-list__subtitle">Здесь будет описание товара-3</p>
+            </div>
+          </li>
+          <li class="catalog-list__item desserts">
+            <div class="catalog-list__background">
+              <img src="./images/content/dessert-2.jpg" alt="" class="catlog-list__image">
+            </div>
+            <div class="catalog-list__back">
+              <h2 class="catalog-list__title">Название товара-4</h2>
+              <p class="catalog-list__subtitle">Здесь будет описание товара-4</p>
+            </div>
+          </li>
+          <li class="catalog-list__item zephyr">
+            <div class="catalog-list__background">
+              <img src="./images/content/zephyr-2.jpg" alt="" class="catlog-list__image">
+            </div>
+            <div class="catalog-list__back">
+              <h2 class="catalog-list__title">Название товара-5</h2>
+              <p class="catalog-list__subtitle">Здесь будет описание товара-5</p>
+            </div>
+          </li>
+          <li class="catalog-list__item meringue">
+            <div class="catalog-list__background">
+              <img src="./images/content/meringue-1.jpg" alt="" class="catlog-list__image">
+            </div>
+            <div class="catalog-list__back">
+              <h2 class="catalog-list__title">Название товара-6</h2>
+              <p class="catalog-list__subtitle">Здесь будет описание товара-6</p>
+            </div>
+          </li>
+          <li class="catalog-list__item marshmeloy">
+            <div class="catalog-list__background">
+              <img src="./images/content/marshmallow-2.jpg" alt="" class="catlog-list__image">
+            </div>
+            <div class="catalog-list__back">
+              <h2 class="catalog-list__title">Название товара-7</h2>
+              <p class="catalog-list__subtitle">Здесь будет описание товара-7</p>
+            </div>
+          </li>
+          <li class="catalog-list__item zephyr">
+            <div class="catalog-list__background">
+              <img src="./images/content/zephyr-3.jpg" alt="" class="catlog-list__image">
+            </div>
+            <div class="catalog-list__back">
+              <h2 class="catalog-list__title">Название товара-8</h2>
+              <p class="catalog-list__subtitle">Здесь будет описание товара-8</p>
+            </div>
+          </li>
+          <li class="catalog-list__item desserts">
+            <div class="catalog-list__background">
+              <img src="./images/content/dessert-3.jpg" alt="" class="catlog-list__image">
+            </div>
+            <div class="catalog-list__back">
+              <h2 class="catalog-list__title">Название товара-9</h2>
+              <p class="catalog-list__subtitle">Здесь будет описание товара-9</p>
+            </div>
+          </li>
+          <li class="catalog-list__item meringue">
+            <div class="catalog-list__background">
+              <img src="./images/content/meringue-2.jpg" alt="" class="catlog-list__image">
+            </div>
+            <div class="catalog-list__back">
+              <h2 class="catalog-list__title">Название товара-10</h2>
+              <p class="catalog-list__subtitle">Здесь будет описание товара-10</p>
+            </div>
+          </li>
+        </ul>
+        <button class="catalog__button">Показать ещё</button>
+      </div>
+    </section>
+    <section class="section reviews">
+      <div class="container">
+        <h2 class="section__title reviews__title">Отзывы</h2>
+        <div class="reviews__container">
+          <ul class="reviews-list">
+            <li class="reviews-list__item active">
+              <div class="reviews-list__wrapper">
+                <img class="reviews-list__image" src="./images/content/CV.jpg" alt="Аватар">
+              </div>
+              <div class="reviews-list__information">
+                <h3 class="reviews-list__name">Маша Иванова</h3>
+                <p class="reviews-list__review">Заказывала подарок мужу на 23 февраля! Очень
+                  понравилось! Шоколад высшего качества, макаруны
+                  самые вкусные в Москве, пряники свежайшие! Очень вкусно, красиво и интересно!
+                  Обязательно буду
+                  заказывать ещё!</p>
+              </div>
+            </li>
+            <li class="reviews-list__item">
+              <div class="reviews-list__wrapper">
+                <img class="reviews-list__image" src="./images/content/CV-2.jpg" alt="Аватар">
+              </div>
+              <div class="reviews-list__information">
+                <h3 class="reviews-list__name">Алёна Макарова</h3>
+                <p class="reviews-list__review">Очень вкусные макаруны, заказываю в Sweet
+                  Dreams
+                  их уже не первый раз. Всем кому дарили в восторге
+                  и очень нравятся. Так что рекомендую Sweet Dreams!</p>
+              </div>
+            </li>
+            <li class="reviews-list__item">
+              <div class="reviews-list__wrapper">
+                <img class="reviews-list__image" src="./images/content/CV-3.jpg" alt="Аватар">
+              </div>
+              <div class="reviews-list__information">
+                <h3 class="reviews-list__name">Маргарита Петрова</h3>
+                <p class="reviews-list__review">Изысканные, необычные, безумно красивые и
+                  вкусные
+                  десерты. Очень нежные и легкие, способны
+                  сделать счастливым любого сладкоежку!</p>
+              </div>
+            </li>
+          </ul>
+          <button class="button-prev" type="button" aria-label="Предыдущий слайд">
+            <svg class="button-icon">
+              <use xlink:href="./images/icons/sprite.svg#arrow-left"></use>
+            </svg>
+          </button>
+          <button class="button-next" type="button" aria-label="Следующий слайд">
+            <svg class="button-icon">
+              <use xlink:href="./images/icons/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+          <ul class="slider-dots">
+            <li class="slider-dots__item">
+              <button class="slider-dots__dot active"
+                aria-label="Кнопки переключения слайда"></button>
+            </li>
+            <li class="slider-dots__item">
+              <button class="slider-dots__dot"
+                aria-label="Кнопки переключения слайда"></button>
+            </li>
+            <li class="slider-dots__item">
+              <button class="slider-dots__dot"
+                aria-label="Кнопки переключения слайда"></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section order">
+      <div class="container">
+        <h2 class="section__title">Закакзать доставку</h2>
+
+        <form class="form" action="#" id="form">
+          <div class="form__inner form__inner--base">
+            <div class="form__item">
+              <label class="form__label" for="name">Имя*:</label>
+              <input class="form__input _required _name" type="text" name="name" id="name"
+                placeholder="Сергей">
+            </div>
+            <div class="form__item">
+              <label class="form__label" for="phone">Телефон*:</label>
+              <input class="form__input _required _phone" type="text" name="phone" id="phone"
+                placeholder="+79277628819">
+            </div>
+          </div>
+          <div class="form__inner form__inner--radio">
+            <div class="options">
+              <div class="options__item">
+                <input class="options__input" type="radio" id="cash" value="cash" name="pay"
+                  checked>
+                <label for="cash" class="options__label">Оплата наличными</label>
+              </div>
+              <div class="options__item">
+                <input class="options__input" type="radio" id="card" value="card" name="pay"
+                  checked>
+                <label for="card" class="options__label">Оплата картой</label>
+              </div>
+            </div>
+          </div>
+          <div class="form__inner form__inner--comment">
+            <div class="form__item">
+              <label class="form__label" for="comment">Комментарий:</label>
+              <textarea class="form__comment" id="comment" name="comment"
+                placeholder="Хочу..."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="form__button">Отправить</button>
+        </form>
+      </div>
+
+      <div class="preloader">
+        <div class="loader"></div>
+      </div>
+
+    </section>
+
   </main>
   <script src="./scripts/main.min.js"></script>
 </body>

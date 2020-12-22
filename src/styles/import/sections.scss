@@ -1,58 +1,14 @@
-.hero {
+.section {
   position: relative;
-  background-color: #33CCCC;
-  padding: 100px 0 80px;
-
-  @media (min-width: 510px) {
-    background: url("../images/decor/welcome-pattern.png") right bottom no-repeat;
-    background-color: #33CCCC;
-  }
-
-  @include tablets {
-    padding: 100px 0 60px;
-  }
-
-  &:before {
-    position: absolute;
-    content: "";
-    bottom: -8%;
-    left: 5%;
-    background: url(../images/decor/hero-sheet.png) no-repeat;
-    width: 50%;
-    height: 112px;
-  }
-}
-
-.about-us {
-  position: relative;
-  padding: 80px 0;
+  padding: 100px 0;
 
   &__title {
     position: relative;
     @include title;
-    margin-bottom: 22px;
-    transform: translateX(-10px);
-    opacity: 0;
-    transition: all .5s ease-in-out;
+    margin-bottom: 20px;
 
-    &::before {
-      position: absolute;
-      content: "";
-      bottom: -5%;
-      left: 50%;
-      width: 35%;
-      height: 3px;
-      background-color: $blue-2;
-      border-radius: 5px;
-      transform: translateX(-50%);
-    }
-
-    &>span {
-      display: block;
-
-      @media (min-width: 500px) {
-        display: inline;
-      }
+    @include tablets {
+      font-size: 30px;
     }
 
     @include desktop {
@@ -60,26 +16,12 @@
     }
   }
 
-  @include tablets {
-    background: url("../images/decor/aboutus-sheet.png") left 33% no-repeat;
-  }
-
-  @include tablets {
-    font-size: 30px;
-  }
-}
-
-.about-us {
-
   &__subtitle {
     font-size: 20px;
     text-align: center;
     font-weight: 500;
     color: #000;
     margin-bottom: 60px;
-    transform: translateX(10px);
-    opacity: 0;
-    transition: all .5s ease-in-out .5s;
 
     @media (min-width: 500px) {
       font-size: 24px;
@@ -94,6 +36,81 @@
   }
 }
 
+.hero {
+  background-color: #33CCCC;
+
+  @media (min-width: 510px) {
+    background: url("../images/decor/welcome-pattern.png") right bottom no-repeat;
+    background-color: #33CCCC;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    bottom: -8%;
+    left: 5%;
+    background: url(../images/decor/hero-sheet.png) no-repeat;
+    width: 50%;
+    height: 112px;
+  }
+}
+
+.about-us {
+
+  &__title {
+    transform: translateX(-10px);
+    opacity: 0;
+    transition: all .5s ease-in-out;
+
+    &>span {
+      display: block;
+
+      @media (min-width: 500px) {
+        display: inline;
+      }
+    }
+  }
+
+  &__subtitle {
+    transform: translateX(10px);
+    opacity: 0;
+    transition: all .5s ease-in-out .5s;
+  }
+
+  @include tablets {
+    background: url("../images/decor/aboutus-sheet.png") left 33% no-repeat;
+  }
+}
+
+.catalog {
+  background-color: #f5f5f5;
+
+  &__button {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $blue-3;
+    padding: 5px 10px;
+    background: none;
+    transform: translateX(-50%);
+    border: 2px solid $blue-3;
+    outline: none;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -40px;
+    left: 20px;
+    width: 83px;
+    height: 90px;
+    background: url(../images/decor/raspberry.png) no-repeat;
+  }
+}
+
 .appear-title {
   transform: translateX(0);
   opacity: 1;
@@ -102,4 +119,34 @@
 .appear-subtitle {
   transform: translateX(0);
   opacity: 1;
+}
+
+.reviews {
+  padding: 50px 0 100px;
+  background-color: #f2f2f2;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 30px;
+    right: 0;
+    width: 113px;
+    height: 79px;
+    background: url("../images/decor/strawberry.png") no-repeat;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.order {
+  background: url("../images/decor/order-pattern.png") repeat;
+  background-color: $blue-1;
 }
