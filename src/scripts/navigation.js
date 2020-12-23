@@ -4,8 +4,9 @@
 	const navigationLogo = document.querySelector('.navigation__link');
 	const headerLogo = document.querySelector('.logo');
 	const links = document.querySelectorAll('.menu__link');
-	const wrapper = document.querySelector('.wrapper');
+	const overlay = document.querySelector('.overlay-navigation');
 	const body = document.body;
+
 
 	function toggleMenu(e) {
 		e.stopPropagation();
@@ -14,6 +15,7 @@
 		headerLogo.classList.toggle('hidden');
 		navigationLogo.classList.toggle('vissible');
 		body.classList.toggle('hidden');
+		overlay.classList.toggle('show')
 	}
 
 	function closeMenu({ target }) {
@@ -23,6 +25,7 @@
 			headerLogo.classList.remove('hidden');
 			navigationLogo.classList.remove('vissible');
 			body.classList.remove('hidden');
+			overlay.classList.remove('show');
 		}
 	}
 
@@ -34,6 +37,6 @@
 		});
 	});
 
-	body.addEventListener('click', closeMenu);
+	overlay.addEventListener('click', closeMenu);
 	openMenu.addEventListener('click', toggleMenu);
 })();

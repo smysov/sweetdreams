@@ -106,3 +106,21 @@
     }
   }
 }
+
+.overlay-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s linear;
+
+  &.show {
+    visibility: visible;
+    opacity: .6;
+    transition: all .5s linear .5s;
+  }
+}

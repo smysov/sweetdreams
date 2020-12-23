@@ -18,10 +18,9 @@ body {
   background-color: #fff;
   color: #fff;
 
-}
-
-.hidden {
-  overflow-y: hidden;
+  &.hidden {
+    overflow-y: hidden;
+  }
 }
 
 a {
