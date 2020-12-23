@@ -34,6 +34,6 @@
 		});
 	});
 
-	document.addEventListener('click', closeMenu);
+	body.addEventListener('click', closeMenu);
 	openMenu.addEventListener('click', toggleMenu);
 })();
