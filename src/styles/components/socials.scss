@@ -1,0 +1,42 @@
+.socials-list {
+  display: flex;
+  column-gap: 12px;
+
+  @include tablets {
+    column-gap: 15px;
+  }
+
+  &__background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s linear;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+
+    @include tablets {
+      width: 40px;
+      height: 40px;
+    }
+
+    &--vk {
+      width: 32px;
+      fill: #4e4edf;
+
+      @include tablets {
+        width: 42px;
+      }
+    }
+
+    &--instagram {
+      fill: brown;
+    }
+  }
+}

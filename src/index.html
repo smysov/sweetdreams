@@ -30,16 +30,16 @@
           </div>
           <ul class="menu">
             <li class="menu__item">
-              <a href="#" class="menu__link">Обо мне</a>
+              <a href="#advantages" class="menu__link">Обо мне</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Мои работы</a>
+              <a href="#catalog" class="menu__link">Мои работы</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Отзывы</a>
+              <a href="#reviews" class="menu__link">Отзывы</a>
             </li>
             <li class="menu__item">
-              <a href="#" class="menu__link">Заказать</a>
+              <a href="#order" class="menu__link">Заказать</a>
             </li>
             <li class="menu__item">
               <a href="#" class="menu__link">Контакты</a>
@@ -81,7 +81,7 @@
         </div>
       </div>
     </section>
-    <section class="section about-us">
+    <section class="section about-us" id="advantages">
       <div class="container">
         <h2 class="section__title about-us__title">Почему <span>Sweet dreems</span></h2>
         <p class="section__subtitle about-us__subtitle">В нашем мире необходимо удивлять,
@@ -133,7 +133,7 @@
         </ul>
       </div>
     </section>
-    <section class="section catalog">
+    <section class="section catalog" id="catalog">
       <div class="container">
         <h2 class="section__title catalog__title">мои работы</h2>
 
@@ -251,14 +251,15 @@
         <button class="catalog__button">Показать ещё</button>
       </div>
     </section>
-    <section class="section reviews">
+    <section class="section reviews" id="reviews">
       <div class="container">
         <h2 class="section__title reviews__title">Отзывы</h2>
         <div class="reviews__container">
           <ul class="reviews-list">
             <li class="reviews-list__item active">
               <div class="reviews-list__wrapper">
-                <img class="reviews-list__image" src="./images/content/CV.jpg" alt="Аватар">
+                <img class="reviews-list__image" src="./images/content/review-1.jpg"
+                  alt="Аватар">
               </div>
               <div class="reviews-list__information">
                 <h3 class="reviews-list__name">Маша Иванова</h3>
@@ -271,7 +272,8 @@
             </li>
             <li class="reviews-list__item">
               <div class="reviews-list__wrapper">
-                <img class="reviews-list__image" src="./images/content/CV-2.jpg" alt="Аватар">
+                <img class="reviews-list__image" src="./images/content/review-2.jpg"
+                  alt="Аватар">
               </div>
               <div class="reviews-list__information">
                 <h3 class="reviews-list__name">Алёна Макарова</h3>
@@ -283,7 +285,8 @@
             </li>
             <li class="reviews-list__item">
               <div class="reviews-list__wrapper">
-                <img class="reviews-list__image" src="./images/content/CV-3.jpg" alt="Аватар">
+                <img class="reviews-list__image" src="./images/content/review-3.jpg"
+                  alt="Аватар">
               </div>
               <div class="reviews-list__information">
                 <h3 class="reviews-list__name">Маргарита Петрова</h3>
@@ -321,7 +324,7 @@
         </div>
       </div>
     </section>
-    <section class="section order">
+    <section class="section order" id="order">
       <div class="container">
         <h2 class="section__title">Закакзать доставку</h2>
 
@@ -368,7 +371,48 @@
       </div>
 
     </section>
+    <section class="section map" id="map">
+      <h2 class="visually-hidden">Координаты</h2>
+    </section>
   </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="contacts">
+          <p class="contacts__description">Самара, ул.Ленинградская, д.32</p>
+          <a href="tel:89276919111" class="contacts__phone"><svg class="contacts__icon">
+              <use xlink:href="./images/icons/sprite.svg#phone"></use>
+            </svg>
+            <span>+7(927)691-91-11</span>
+          </a>
+        </div>
+        <div class="socials">
+          <ul class="socials-list">
+            <li class="socials-list__item">
+              <a href="https://vk.com/" class="socials-list__link" target="_blank" rel="noopener">
+                <div class="socials-list__background">
+                  <svg class="socials-list__icon socials-list__icon--vk">
+                    <use xlink:href="./images/icons/sprite.svg#vk"></use>
+                  </svg>
+                </div>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a href="https://instagram.com/" class="socials-list__link" target="_blank" rel="noopener">
+                <div class="socials-list__background">
+                  <svg class="socials-list__icon socials-list__icon--instagram">
+                    <use xlink:href="./images/icons/sprite.svg#instagram"></use>
+                  </svg>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script
+    src="https://api-maps.yandex.ru/2.1/?apikey=5f520887-1d94-43de-bb90-34174d5f5dab&lang=ru_RU"></script>
   <script src="./scripts/main.min.js"></script>
 </body>
 

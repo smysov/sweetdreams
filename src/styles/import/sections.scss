@@ -150,3 +150,42 @@
   background: url("../images/decor/order-pattern.png") repeat;
   background-color: $blue-1;
 }
+
+.map {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  height: 400px;
+}
+
+.footer {
+  padding: 20px 0;
+  @include font("Cormorant Garamond", 18px, 700, normal);
+  color: #000;
+  background-color: rgba(229, 229, 229, .4);
+
+  @include tablets {
+    padding: 30px 0;
+  }
+
+  @include desktop{
+    padding: 35px 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+
+    @include tablets {
+      flex-direction: row;
+      justify-content: space-around;
+      row-gap: 0;
+    }
+
+    @include desktop {
+      justify-content: space-between;
+    }
+  }
+}
