@@ -47,7 +47,6 @@
             </li>
           </ul>
         </nav>
-
         <a href="tel:89276919111" class="phone">
           <div class="phone__inner-icon">
             <svg class="phone__icon">
@@ -256,74 +255,66 @@
     <section class="section reviews" id="reviews">
       <div class="container">
         <h2 class="section__title reviews__title">Отзывы</h2>
-        <div class="reviews__container">
-          <ul class="reviews-list">
-            <li class="reviews-list__item active">
-              <div class="reviews-list__wrapper">
-                <img class="reviews-list__image" src="./images/content/review-1.jpg"
+
+
+        <div class="reviews-slider swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="reviews-slider__wrapper swiper-wrapper">
+            <!-- Slides -->
+            <div class="reviews-slider__slide swiper-slide">
+              <div class="reviews-slider__inner">
+                <img class="reviews-slider__image" src="./images/content/review-1.jpg"
                   alt="Аватар">
               </div>
-              <div class="reviews-list__information">
-                <h3 class="reviews-list__name">Маша Иванова</h3>
-                <p class="reviews-list__review">Заказывала подарок мужу на 23 февраля! Очень
+              <div class="reviews-slider__information">
+                <h3 class="reviews-slider__name">Маша Иванова</h3>
+                <p class="reviews-slider__review">Заказывала подарок мужу на 23 февраля! Очень
                   понравилось! Шоколад высшего качества, макаруны
                   самые вкусные в Москве, пряники свежайшие! Очень вкусно, красиво и интересно!
                   Обязательно буду
                   заказывать ещё!</p>
               </div>
-            </li>
-            <li class="reviews-list__item">
-              <div class="reviews-list__wrapper">
-                <img class="reviews-list__image" src="./images/content/review-2.jpg"
+            </div>
+            <div class="reviews-slider__slide swiper-slide">
+              <div class="reviews-slider__inner">
+                <img class="reviews-slider__image" src="./images/content/review-2.jpg"
                   alt="Аватар">
               </div>
-              <div class="reviews-list__information">
-                <h3 class="reviews-list__name">Алёна Макарова</h3>
-                <p class="reviews-list__review">Очень вкусные макаруны, заказываю в Sweet
+              <div class="reviews-slider__information">
+                <h3 class="reviews-slider__name">Алёна Макарова</h3>
+                <p class="reviews-slider__review">Очень вкусные макаруны, заказываю в Sweet
                   Dreams
                   их уже не первый раз. Всем кому дарили в восторге
                   и очень нравятся. Так что рекомендую Sweet Dreams!</p>
               </div>
-            </li>
-            <li class="reviews-list__item">
-              <div class="reviews-list__wrapper">
-                <img class="reviews-list__image" src="./images/content/review-3.jpg"
+            </div>
+            <div class="reviews-slider__slide swiper-slide">
+              <div class="reviews-slider__inner">
+                <img class="reviews-slider__image" src="./images/content/review-3.jpg"
                   alt="Аватар">
               </div>
-              <div class="reviews-list__information">
-                <h3 class="reviews-list__name">Маргарита Петрова</h3>
-                <p class="reviews-list__review">Изысканные, необычные, безумно красивые и
+              <div class="reviews-slider__information">
+                <h3 class="reviews-slider__name">Маргарита Петрова</h3>
+                <p class="reviews-slider__review">Изысканные, необычные, безумно красивые и
                   вкусные
                   десерты. Очень нежные и легкие, способны
                   сделать счастливым любого сладкоежку!</p>
               </div>
-            </li>
-          </ul>
-          <button class="button-prev" type="button" aria-label="Предыдущий слайд">
-            <svg class="button-icon">
-              <use xlink:href="./images/icons/sprite.svg#arrow-left"></use>
-            </svg>
-          </button>
-          <button class="button-next" type="button" aria-label="Следующий слайд">
-            <svg class="button-icon">
-              <use xlink:href="./images/icons/sprite.svg#arrow-right"></use>
-            </svg>
-          </button>
-          <ul class="slider-dots">
-            <li class="slider-dots__item">
-              <button class="slider-dots__dot active"
-                aria-label="Кнопки переключения слайда"></button>
-            </li>
-            <li class="slider-dots__item">
-              <button class="slider-dots__dot"
-                aria-label="Кнопки переключения слайда"></button>
-            </li>
-            <li class="slider-dots__item">
-              <button class="slider-dots__dot"
-                aria-label="Кнопки переключения слайда"></button>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
         </div>
+
+
+
       </div>
     </section>
     <section class="section order" id="order">
@@ -391,7 +382,8 @@
         <div class="socials">
           <ul class="socials-list">
             <li class="socials-list__item">
-              <a href="https://vk.com/" class="socials-list__link" target="_blank" rel="noopener">
+              <a href="https://vk.com/" class="socials-list__link" target="_blank"
+                rel="noopener">
                 <div class="socials-list__background">
                   <svg class="socials-list__icon socials-list__icon--vk">
                     <use xlink:href="./images/icons/sprite.svg#vk"></use>
@@ -400,7 +392,8 @@
               </a>
             </li>
             <li class="socials-list__item">
-              <a href="https://instagram.com/" class="socials-list__link" target="_blank" rel="noopener">
+              <a href="https://instagram.com/" class="socials-list__link" target="_blank"
+                rel="noopener">
                 <div class="socials-list__background">
                   <svg class="socials-list__icon socials-list__icon--instagram">
                     <use xlink:href="./images/icons/sprite.svg#instagram"></use>
@@ -414,7 +407,8 @@
     </div>
   </footer>
   <script
-    src="https://api-maps.yandex.ru/2.1/?apikey=5f520887-1d94-43de-bb90-34174d5f5dab&lang=ru_RU" defer></script>
+    src="https://api-maps.yandex.ru/2.1/?apikey=5f520887-1d94-43de-bb90-34174d5f5dab&lang=ru_RU"
+    defer></script>
   <script src="./scripts/main.min.js" defer></script>
 </body>
 
