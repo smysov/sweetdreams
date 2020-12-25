@@ -20,7 +20,7 @@ const csso = require('gulp-csso');
 
 const env = process.env.NODE_ENV;
 
-const { SRC_PATH, DIST_PATH, STYLE_LIBS, JS_LIBS } = require('./gulp.config');
+const { SRC_PATH, DIST_PATH, STYLE_LIBS, SWIPER } = require('./gulp.config');
 
 sass.compiler = require('node-sass');
 
@@ -107,11 +107,11 @@ task('images:decor', () => {
 
 //КОНВЕРТАЦИЯ ИЗОБРАЖЕНИЙ
 
-// task('webp:content', () => {
-// 	return src(`${SRC_PATH}/images/content/*.{jpg,png}`)
-// 		.pipe(webp({ quality: 80 }))
-// 		.pipe(dest(`${DIST_PATH}/img/content/`));
-// });
+task('webp:content', () => {
+	return src(`${SRC_PATH}/images/content/*.{jpg,png}`)
+		.pipe(webp({ quality: 80 }))
+		.pipe(dest(`${DIST_PATH}/images/content/`));
+});
 
 //СТИЛИ
 
@@ -139,7 +139,7 @@ task('styles', () => {
 //СКРИПТЫ
 
 task('scripts', () => {
-	return src(`${SRC_PATH}/scripts/*js`)
+	return src([SWIPER, `${SRC_PATH}/scripts/*js`])
 		.pipe(gulpif(env === 'dev', sourcemaps.init()))
 		.pipe(concat('main.min.js'))
 		.pipe(gulpif(env === 'prod', babel({ presets: ['@babel/env'] })))
@@ -206,6 +206,7 @@ task(
 			'images:content',
 			'images:decor',
 			'copy:favicons',
+			'webp:content',
 			'mailer',
 			'icons',
 			'styles',
@@ -227,7 +228,7 @@ task(
 			'images:content',
 			'images:decor',
 			'copy:favicons',
-			// 'webp:content',
+			'webp:content',
 			'icons',
 			'styles',
 			'scripts',

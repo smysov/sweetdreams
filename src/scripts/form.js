@@ -22,7 +22,6 @@
 					preloader.classList.remove('show');
 					form.reset();
 				} else {
-					//будет модальное окно
 					renderOverlayError();
 					preloader.classList.remove('show');
 				}
@@ -55,12 +54,10 @@
 		}
 
 		function formAddError(input) {
-			// input.parentElement.classList.add('error');
 			input.classList.add('_error');
 		}
 
 		function formRemoveError(input) {
-			// input.parentElement.classList.remove('error');
 			input.classList.remove('_error');
 		}
 
@@ -134,13 +131,10 @@
 			document.querySelector('.main').appendChild(fragment);
 
 			overlay.addEventListener('click', function (e) {
-				console.log(e.target)
 				if(e.target.tagName === 'BUTTON' || e.target === overlay) {
 					document.body.classList.remove('hidden');
 					overlay.remove()
 				}
 			})
 		}
-
-	
 })();
