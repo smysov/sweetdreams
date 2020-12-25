@@ -107,11 +107,11 @@ task('images:decor', () => {
 
 //КОНВЕРТАЦИЯ ИЗОБРАЖЕНИЙ
 
-// task('webp:content', () => {
-// 	return src(`${SRC_PATH}/images/content/*.{jpg,png}`)
-// 		.pipe(webp({ quality: 80 }))
-// 		.pipe(dest(`${DIST_PATH}/img/content/`));
-// });
+task('webp:content', () => {
+	return src(`${SRC_PATH}/images/content/*.{jpg,png}`)
+		.pipe(webp({ quality: 80 }))
+		.pipe(dest(`${DIST_PATH}/images/content/`));
+});
 
 //СТИЛИ
 
@@ -206,6 +206,7 @@ task(
 			'images:content',
 			'images:decor',
 			'copy:favicons',
+			'webp:content',
 			'mailer',
 			'icons',
 			'styles',
@@ -227,7 +228,7 @@ task(
 			'images:content',
 			'images:decor',
 			'copy:favicons',
-			// 'webp:content',
+			'webp:content',
 			'icons',
 			'styles',
 			'scripts',

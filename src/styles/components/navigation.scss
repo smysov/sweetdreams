@@ -64,7 +64,7 @@
 .navigation {
 
   &__logo {
-    @include font("Kamila", 36px, 500, normal);
+    @include font("Kamila", 36px, 400, normal);
     letter-spacing: 1px;
     position: absolute;
     top: 20px;

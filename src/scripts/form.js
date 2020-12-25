@@ -131,7 +131,6 @@
 			document.querySelector('.main').appendChild(fragment);
 
 			overlay.addEventListener('click', function (e) {
-				console.log(e.target)
 				if(e.target.tagName === 'BUTTON' || e.target === overlay) {
 					document.body.classList.remove('hidden');
 					overlay.remove()
