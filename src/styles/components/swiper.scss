@@ -52,7 +52,7 @@
   }
 
   &__review {
-    @extend .reviews-list__name;
+    @extend .reviews-slider__name;
     font-size: 14px;
     line-height: 1.8;
     margin-bottom: 30px;
