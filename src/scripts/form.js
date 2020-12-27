@@ -12,12 +12,12 @@
 
 			if (error === 0) {
 				preloader.classList.add('show');
-				let response = await fetch('./phpmailer/send.php', {
+				let response = await fetch('sendmailer.php', {
 					method: 'POST',
 					body: formData,
 				});
 				if (response.ok) {
-					let result = await response.join();
+					let result = await response.json();
 					alert(result.message); //будет модальное окно
 					preloader.classList.remove('show');
 					form.reset();
