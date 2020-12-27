@@ -60,8 +60,9 @@
           <p class="phone__text">+7(927)691-91-11</p>
         </a>
         <button class="menu-button" aria-label="Бургер-меню">
-          <span class="burger-menu"></span>
-          <span class="close-menu"></span>
+          <svg class="menu-button__icon">
+            <use xlink:href="./images/icons/sprite.svg#print"></use>
+          </svg>
         </button>
       </div>
     </div>
@@ -360,7 +361,7 @@
       <div class="container">
         <h2 class="section__title">Закакзать доставку</h2>
 
-        <form class="form" action="#" id="form">
+        <form class="form" action="sendmail.php" id="form">
           <div class="form__inner form__inner--base">
             <div class="form__item">
               <label class="form__label" for="name">Имя*:</label>

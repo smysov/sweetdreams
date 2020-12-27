@@ -10,7 +10,6 @@
 
 	function toggleMenu(e) {
 		e.stopPropagation();
-		openMenu.classList.toggle('opened');
 		navigation.classList.toggle('navigation--active');
 		headerLogo.classList.toggle('hidden');
 		navigationLogo.classList.toggle('vissible');
@@ -20,7 +19,6 @@
 
 	function closeMenu({ target }) {
 		if (!navigation.contains(target)) {
-			openMenu.classList.remove('opened');
 			navigation.classList.remove('navigation--active');
 			headerLogo.classList.remove('hidden');
 			navigationLogo.classList.remove('vissible');

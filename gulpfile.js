@@ -50,8 +50,14 @@ task('fonts', () => {
 //КОПИРОВАНИЕ PHPMAILERA
 
 task('mailer', () => {
-	return src(`${SRC_PATH}/phpmailer/*`)
-		.pipe(dest(`${DIST_PATH}/phpmailer`))
+	return src(`${SRC_PATH}/phpmailer/**/*`)
+		.pipe(dest(`${DIST_PATH}/phpmailer/`))
+		.pipe(reload({ stream: true }));
+});
+
+task('mailer:send', () => {
+	return src(`${SRC_PATH}/sendmail.php`)
+		.pipe(dest(DIST_PATH))
 		.pipe(reload({ stream: true }));
 });
 
@@ -208,6 +214,7 @@ task(
 			'copy:favicons',
 			'webp:content',
 			'mailer',
+			'mailer:send',
 			'icons',
 			'styles',
 			'scripts',
@@ -229,6 +236,8 @@ task(
 			'images:decor',
 			'copy:favicons',
 			'webp:content',
+			'mailer',
+			'mailer:send',
 			'icons',
 			'styles',
 			'scripts',
