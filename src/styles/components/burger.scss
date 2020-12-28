@@ -3,20 +3,40 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  // width: 40px;
-  // height: 40px;
   border: none;
   background-color: transparent;
-  z-index: 3;
+  z-index: 2;
   outline: transparent;
-
+  transition: z-index .5s linear .5s;
+  
   @include tablets {
     display: none;
   }
-
+  
   &__icon {
     fill: #fff;
     width: 45px;
     height: 45px;
   }
+  
+  &.displayed {
+    transition: z-index .6s linear .5s;
+    z-index: 3;
+  }
 }
+
+// @keyframes moveup {
+//   0% {
+//     transform: translate3d(0, 0, -5px);
+//     z-index: 2;
+//   }
+
+//   50% {
+//     transform: translate3d(0, 0, 30px);
+//   }
+
+//   100% {
+//     z-index: 3;
+//     transform: translate3d(0, 0, 0);
+//   }
+// }
