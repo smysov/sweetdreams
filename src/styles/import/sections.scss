@@ -162,6 +162,10 @@
   overflow: hidden;
   padding: 0;
   height: 400px;
+
+  @include tablets {
+    height: 550px;
+  }
 }
 
 .footer {
