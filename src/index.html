@@ -447,13 +447,6 @@
   </footer>
   <script src="./scripts/main.min.js"></script>
   <script>
-    setTimeout(function () {
-      let map = document.createElement('script');
-      map.src =
-        'https://api-maps.yandex.ru/2.1/?apikey=5f520887-1d94-43de-bb90-34174d5f5dab&lang=ru_RU&onload=init';
-      document.body.appendChild(map);
-    }, 7000);
-
     function init() {
       let map = new ymaps.Map('map', {
         center: [53.18793982021581, 50.09011833541452],
@@ -481,6 +474,8 @@
       });
     }
   </script>
+  <script async
+    src="https://api-maps.yandex.ru/2.1/?load=package.standard&apikey=5f520887-1d94-43de-bb90-34174d5f5dab&lang=ru_RU&onload=init"></script>
 </body>
 
 </html>
