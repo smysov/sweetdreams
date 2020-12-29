@@ -133,7 +133,28 @@
 
 .order {
   background: url("../images/decor/order-pattern.png") repeat;
-  background-color: $blue-1;
+  background-color: #5CCCCC;
+
+  @include tablets {
+    background: url("../images/decor/blueberries.png") 5% 80% no-repeat,
+      url("../images/decor/order-pattern.png") repeat;
+    background-color: #5CCCCC;
+  }
+
+  &::before {
+    display: none;
+
+    @include tablets {
+      display: block;
+      position: absolute;
+      content: "";
+      top: -15%;
+      right: 0;
+      width: 148px;
+      height: 198px;
+      background: url("../images/decor/blueberries-sheet.png") no-repeat;
+    }
+  }
 }
 
 .map {
@@ -153,7 +174,7 @@
     padding: 30px 0;
   }
 
-  @include desktop{
+  @include desktop {
     padding: 35px 0;
   }
 

@@ -106,8 +106,11 @@
   flex-direction: column;
   row-gap: 15px;
 
-  @include tablets {
+  @media (min-width: 500px) {
     flex-direction: row;
+  }
+
+  @include tablets {
     column-gap: 15px;
     row-gap: 0;
   }

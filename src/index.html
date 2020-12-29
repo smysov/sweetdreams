@@ -359,7 +359,7 @@
     </section>
     <section class="section order" id="order">
       <div class="container">
-        <h2 class="section__title">Закакзать доставку</h2>
+        <h2 class="section__title order__title">Закакзать доставку</h2>
 
         <form action="#" class="form" id="form">
           <div class="form__inner form__inner--base">
@@ -446,6 +446,8 @@
     </div>
   </footer>
   <script src="./scripts/main.min.js"></script>
+  <script async
+    src="https://api-maps.yandex.ru/2.1/?load=package.standard&apikey=5f520887-1d94-43de-bb90-34174d5f5dab&lang=ru_RU&onload=init"></script>
   <script>
     function init() {
       let map = new ymaps.Map('map', {
@@ -474,8 +476,6 @@
       });
     }
   </script>
-  <script async
-    src="https://api-maps.yandex.ru/2.1/?load=package.standard&apikey=5f520887-1d94-43de-bb90-34174d5f5dab&lang=ru_RU&onload=init"></script>
 </body>
 
 </html>
