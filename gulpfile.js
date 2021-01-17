@@ -80,8 +80,8 @@ task('copy:logo', () => {
 //КОПИРОВАНИЕ ФАВИКОНОК
 
 task('copy:favicons', () => {
-	return src(`${SRC_PATH}/images/favicons/*.{svg,png,json,jpg,jpeg}`)
-		.pipe(dest(`${DIST_PATH}/img/favicons/`))
+	return src(`${SRC_PATH}/images/favicon/*.{svg,png,json,jpg,jpeg,json}`)
+		.pipe(dest(`${DIST_PATH}/images/favicon/`))
 		.pipe(reload({ stream: true }));
 });
 
