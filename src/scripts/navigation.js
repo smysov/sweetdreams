@@ -9,24 +9,12 @@
 
 
 	function toggleMenu(e) {
-		e.stopPropagation();
 		openMenu.classList.toggle('displayed')
 		navigation.classList.toggle('navigation--active');
 		headerLogo.classList.toggle('hidden');
 		navigationLogo.classList.toggle('vissible');
 		body.classList.toggle('hidden');
 		overlay.classList.toggle('show')
-	}
-
-	function closeMenu({ target }) {
-		if (!navigation.contains(target)) {
-			openMenu.classList.remove('displayed');
-			navigation.classList.remove('navigation--active');
-			headerLogo.classList.remove('hidden');
-			navigationLogo.classList.remove('vissible');
-			body.classList.remove('hidden');
-			overlay.classList.remove('show');
-		}
 	}
 
 	links.forEach(link => {
@@ -37,6 +25,6 @@
 		});
 	});
 
-	overlay.addEventListener('click', closeMenu);
+	overlay.addEventListener('click', toggleMenu);
 	openMenu.addEventListener('click', toggleMenu);
 })();

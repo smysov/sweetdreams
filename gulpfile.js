@@ -17,6 +17,7 @@ const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const htmlmin = require('gulp-htmlmin');
 const csso = require('gulp-csso');
+const ghPages = require('gulp-gh-pages');
 
 const env = process.env.NODE_ENV;
 
@@ -189,6 +190,10 @@ task('server', () => {
 		},
 		open: true,
 	});
+});
+
+task('deploy', () => {
+	return src('.dist/**/*').pipe(ghPages());
 });
 
 //СЛЕЖКА ФАЙЛОВ
