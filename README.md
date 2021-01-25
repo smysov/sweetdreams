@@ -12,7 +12,10 @@
 
 <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/smysov/sweetdreams?style=plastic">
 
-<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/smysov/sweetdreams/total">
+<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/smysov/sweetdreams/total?style=plastic">
+
+<img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/smysov/sweetdreams?label=package.json&style=plastic">
+
 </p>
 
 
@@ -33,7 +36,7 @@ _Landing page for author's desserts_
 
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/)
 ```sh
-$ git clone git@github.com:smysov/sweetdreams.git
+$ git clone https://github.com/smysov/sweetdreams.git or git@github.com:smysov/sweetdreams.git
 $ cd sweetdreams
 $ npm install
 ```
